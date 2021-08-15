@@ -112,5 +112,11 @@ footer {
 }
 
 .pop-in {
-  transition: all 2s linear 1s;
+  animation: scale 200ms linear;
+}
+
+@keyframes scale {
+  0%   {transform: scale(0);}
+  85%  {transform: scale(1.02);}
+  100% {transform: scale(1);}
 }

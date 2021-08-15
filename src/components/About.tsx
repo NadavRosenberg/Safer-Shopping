@@ -1,10 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom'
 
 const About = () => {
+    const { t } = useTranslation();
     return (
         <div>
-            <h4>Version 1.0.0</h4>
-            <Link to='/'>Go Back</Link>
+            <h4>{t('version')}</h4>
+            <Link to='/'>{t('go-back')}</Link>
         </div>
     )
 }

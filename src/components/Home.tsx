@@ -11,7 +11,7 @@ const Task = ({ home, onDelete, onToggle }: PropTypes) => {
     return (
         <div className={`task ${home.reminder ? 'reminder' : ''}`} onDoubleClick={() => onToggle(home.key)}>
             <h3>
-                {home.title} 
+                {home.title}
                 <FaTimes style={{ color: 'red', cursor: 'pointer' }} onClick={() => onDelete(home.key)}/>
             </h3>
             <p>{home.address}</p>

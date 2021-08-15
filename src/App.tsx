@@ -23,6 +23,7 @@ function App() {
                     address: dataVal.address,
                     notes: dataVal.notes,
                     reminder: dataVal.reminder,
+                    price: dataVal.price,
                 })
             })
             setHomes(newHomeState);
@@ -53,17 +54,15 @@ function App() {
         <Router>
             <div className="container">
                 <Header
-                    title="Home's Tracker"
                     onAdd={() => setShowAddHome(!showAddHome)}
                     showAdd={showAddHome}
                 />
-
                 <Route
                     path="/"
                     exact
                     render={(props) => (
                         <>
-                            {showAddHome && <AddHome homes={homes} setHomes={setHomes}/>}
+                            {showAddHome && <AddHome />}
                             {homes.length > 0 ? (
                                 <Homes
                                     homes={homes}
@@ -75,7 +74,7 @@ function App() {
                             )}
                         </>
                     )}
-                ></Route>
+                />
                 <Route path="/about" component={About}/>
                 <Footer/>
             </div>
